@@ -1,0 +1,74 @@
+\newcommand{\test}{%
+   \textbf{Institute Information:}\par
+   Title: \pgfkeysvalueof{/Project/title}\par
+  Title (ALL CAPS): \ProjectTitleCaps\par
+  University: \pgfkeysvalueof{/Project/institute/university}\par
+  Faculty: \pgfkeysvalueof{/Project/institute/faculty}\par
+  College: \pgfkeysvalueof{/Project/institute/college}\par\medskip
+\textbf{Mentor}\par
+  Name : \pgfkeysvalueof{/Project/mentor/name}\par
+  title:\pgfkeysvalueof{/Project/mentor/title}\par\medskip
+
+  \textbf{Authors:}\par
+  Author 1: \pgfkeysvalueof{/Project/authors/author1/name} (Reg No: \pgfkeysvalueof{/Project/authors/author1/regNo})\par
+  Author 2: \pgfkeysvalueof{/Project/authors/author2/name} (Reg No: \pgfkeysvalueof{/Project/authors/author2/regNo})\par\medskip
+    \textbf{Supervisor:}\par
+  \pgfkeysvalueof{/Project/supervisor/name} (\pgfkeysvalueof{/Project/supervisor/title})\par\medskip
+    \textbf{Letter of Approval Approvers:}\par
+  Supervisor: \pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/name} (\pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/title})\par
+  Principal: \pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/name} (\pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/title})\par
+  Internal Examiner: \pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/name} (\pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/title})\par
+  External Examiner: \pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/name} (\pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/title})\par\medskip
+}
+
+\setupProject{
+  title = {Sellion: A Scalable E-commerce Platform with Blazor \& .NET},
+  title/allcaps = {SELLION: A SCALABLE E-COMMERCE PLATFORM WITH BLAZOR \& .NET},
+  submissionDate = {November, 2025},
+  degree = {Bachelor in Computer Application},
+  institute = {
+    university = {Tribhuvan University},
+    faculty = {Faculty of Humanities and Social Science},
+    college = {Nepathya College},
+    address = {Tillottama -5, Rupandehi}
+  },
+  mentor = {
+    name = {Mentor's Name},
+    title = {Mentor's Title},
+    institution= {Mentor's Company/Institution}
+  },
+  authors = {
+    author1 = {
+      name = {Amrit Paudel},
+      regNo = {6-2-1182-36-2020}
+    },
+    author2 = {
+      name = {Swastika Khanal},
+      regNo = {6-2-1182-36-2020}
+    }
+  },
+  letterOfApproval = {
+    approvers = {
+      supervisor = {
+         name = {Supervisor's Name},
+         title = {Supervisor's Title},
+         institution = {Supervisor's Company/Instution }
+      },
+      principal = {
+         name = {Sanjeev Bhandari},
+         title = {Principal},
+         institution = {Nepathya College}
+      },
+      internalExaminer = {
+         name = {Shiva Bhattarai},
+         title = {Internal Examiner},
+         institution = {Nepathya College}
+      },
+      externalExaminer = {
+         name = {Suresh Sharma},
+         title = {External Examiner},
+         institution = {Birendra Multiple Campus}
+      }
+    }
+  },
+}

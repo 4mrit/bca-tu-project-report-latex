@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{report}
+\input{config/variablesDefinition.tex}
+\input{config/variables.tex}
+\input{config/preamble.tex}
+
+\begin{document}
+    
+    % Front Matter 
+    \input{contents/frontmatter/cover.tex}
+    \input{contents/frontmatter/certificates.tex}
+    \input{contents/frontmatter/acknowledgment.tex}
+    \input{contents/frontmatter/abstract.tex}
+    \input{contents/frontmatter/tableOfContents.tex}
+    \input{contents/frontmatter/abbreviations.tex}
+
+    % Start Arabic Page Numbering
+    \startMainMatter
+
+    % Chapters
+    \input{contents/chapters/chapter1/chapter1.tex}
+    \input{contents/chapters/chapter2/chapter2.tex}
+    \input{contents/chapters/chapter3/chapter3.tex}
+    \input{contents/chapters/chapter4/chapter4.tex}
+    \input{contents/chapters/chapter5/chapter5.tex}
+
+    % Back Matter
+    \input{contents/backmatter/references.tex}
+    \input{contents/backmatter/bibliography.tex}
+    \input{contents/backmatter/appendix.tex}
+    % \input{contents/backmatter/source_code/code1.tex}
+\end{document}

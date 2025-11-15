@@ -1,0 +1,129 @@
+% Page Layout
+\usepackage[
+  a4paper,
+  top    = 1in,
+  bottom = 1in,
+  left   = 1.25in,
+  right  = 1in
+]{geometry}
+
+% ============= Required Packages =============
+% Basic Formatting
+\usepackage{bookmark}
+\usepackage{setspace}    % Line spacing
+\usepackage{ragged2e}    % Text alignment
+\usepackage{lipsum}      % Lorem Ipsum
+
+% Typography and Fonts
+\usepackage{newtxtext,newtxmath}  % Times New Roman alternative with math
+
+% Citations and References
+\usepackage{hyperref}    % Hyperlinks
+
+\hypersetup{
+    hidelinks,            % Remove colored borders from links
+    colorlinks=false,     % Remove colored text from links
+    pdfborder={0 0 0},   % Remove PDF borders
+    linktoc=all          % Make both section and page numbers linkable
+}
+
+% Section and TOC Formatting
+\usepackage{titlesec}    % Custom section formatting
+\usepackage{tocloft}     % TOC formatting
+
+% Tables and Figures
+\usepackage{caption}     % Captions
+\usepackage{tabularx,array,booktabs,arydshln}  % Tables
+\usepackage{graphicx}    % Images
+\usepackage{float}       % Float positioning
+\usepackage{xcolor}      % Colors
+\usepackage{listings}    % Code listings
+
+
+% ============= Font Definitions =============
+\newcommand{\HeadingChapterFont}{\fontsize{16}{20}\bfseries\selectfont}
+\newcommand{\HeadingSectionFont}{\fontsize{14}{17}\bfseries\selectfont}
+\newcommand{\HeadingSubsectionFont}{\fontsize{12}{15}\bfseries\selectfont}
+\newcommand{\HeadingSubsubsectionFont}{\fontsize{12}{14}\bfseries\selectfont}
+\renewcommand{\normalsize}{\fontsize{12}{18}\selectfont}
+
+% ============= Headers and Footers =============
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[L]{Internship Report} % Left header
+\fancyhead[R]{\thepage}      % Right header
+\fancyfoot[C]{\thepage}      % Centered page number in footer
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+
+% ============= Section Formatting =============
+% Chapter: 16pt, bold, "Chapter 1: Title"
+\titleformat{\chapter}[hang]{\HeadingChapterFont}{Chapter \thechapter: }{0em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{2ex}
+
+% Section: 14pt, bold
+\titleformat{\section}[hang]{\HeadingSectionFont}{\thesection\ }{0em}{}
+\titlespacing*{\section}{0pt}{0pt}{1.5ex}
+
+% Subsection: 12pt, bold
+\titleformat{\subsection}[hang]{\HeadingSubsectionFont}{\thesubsection\ }{0em}{}
+\titlespacing*{\subsection}{0pt}{0pt}{1ex}
+
+% Subsubsection: 12pt, bold
+\titleformat{\subsubsection}[hang]{\HeadingSubsubsectionFont}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{0pt}{1em}
+
+% ============= TOC Configuration =============
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% TOC Formatting
+\renewcommand{\cftchapfont}{\bfseries}  % Bold chapter titles in TOC
+\renewcommand{\cftsecfont}{}  
+\renewcommand{\cftsubsecfont}{}  
+
+\renewcommand{\cfttoctitlefont}{\HeadingChapterFont}  
+\renewcommand{\cftloftitlefont}{\HeadingChapterFont}  
+\renewcommand{\cftlottitlefont}{\HeadingChapterFont}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1em}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftafterloftitleskip}{1em}
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cftafterlottitleskip}{1em}  
+
+% ============= Figure/Table Captions Formatting =============
+\captionsetup[figure]{
+  labelfont=bf,
+  textfont=bf,
+  font=normalsize,
+  justification=centering
+}
+
+\captionsetup[table]{
+  labelfont=bf,
+  textfont=bf,
+  font=normalsize,
+  justification=centering,
+  position=above
+}
+
+% ============= Custom Commands =============
+\newcommand{\para}[1]{\setstretch{1.5}\justifying\noindent\textmd #1\par}
+
+% Command to Switch Page Numbering to Arabic (after front matter)
+\newcommand{\startMainMatter}{
+    \cleardoublepage
+    \pagenumbering{arabic}
+}
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+
+
+% ============= General Settings =============
+\setstretch{1.5}
+\pagenumbering{roman}  % Start with Roman numerals for front matter
+
+\usepackage{tocloft}
+\setlength{\cftbeforechapskip}{0pt}
+
+\usepackage{enumitem}
+\setlist{noitemsep} 

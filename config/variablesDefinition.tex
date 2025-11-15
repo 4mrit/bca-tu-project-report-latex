@@ -1,0 +1,62 @@
+\usepackage{pgfkeys}
+\pgfkeys{
+  /Project/.cd,
+  title/.initial = {ProjectName},
+  title/allcaps/.code = {\edef\ProjectTitleCaps{\MakeUppercase{#1}}},
+  submissionDate/.initial = {},
+  degree/.initial = {},
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%% Institute %%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  institute/.code={\pgfqkeys{/Project/institute}{#1}},
+  %
+  institute/university/.initial = {},
+  institute/faculty/.initial = {},
+  institute/college/.initial = {},
+  institute/address/.initial = {},
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%
+  authors/.code={\pgfqkeys{/Project/authors}{#1}},
+  %
+  authors/author1/.code={\pgfqkeys{/Project/authors/author1}{#1}},
+  authors/author1/name/.initial = {},
+  authors/author1/regNo/.initial = {},
+  %
+  authors/author2/.code={\pgfqkeys{/Project/authors/author2}{#1}},
+  authors/author2/name/.initial = {},
+  authors/author2/regNo/.initial = {},
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%% Supervisors %%%%%%%%%%%%%%%%%%%%%%%
+  %
+  mentor/.code={\pgfqkeys{/Project/mentor}{#1}},
+  mentor/name/.initial = {},
+  mentor/title/.initial = {},
+  mentor/institution/.initial = {},
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%% Letter Of Approval %%%%%%%%%%%%%%%%
+  letterOfApproval/.code={\pgfqkeys{/Project/letterOfApproval}{#1}},
+  letterOfApproval/approvers/.code={\pgfqkeys{/Project/letterOfApproval/approvers}{#1}},
+  %
+  letterOfApproval/approvers/supervisor/.code={\pgfqkeys{/Project/letterOfApproval/approvers/supervisor}{#1}},
+  letterOfApproval/approvers/supervisor/name/.initial = {},
+  letterOfApproval/approvers/supervisor/title/.initial = {},
+  letterOfApproval/approvers/supervisor/institution/.initial = {},
+  %
+  letterOfApproval/approvers/principal/.code={\pgfqkeys{/Project/letterOfApproval/approvers/principal}{#1}},
+  letterOfApproval/approvers/principal/name/.initial = {},
+  letterOfApproval/approvers/principal/title/.initial = {},
+  letterOfApproval/approvers/principal/institution/.initial = {},
+  %
+  letterOfApproval/approvers/internalExaminer/.code={\pgfqkeys{/Project/letterOfApproval/approvers/internalExaminer}{#1}},
+  letterOfApproval/approvers/internalExaminer/name/.initial = {},
+  letterOfApproval/approvers/internalExaminer/title/.initial = {},
+  letterOfApproval/approvers/internalExaminer/institution/.initial = {},
+  %
+  letterOfApproval/approvers/externalExaminer/.code={\pgfqkeys{/Project/letterOfApproval/approvers/externalExaminer}{#1}},
+  letterOfApproval/approvers/externalExaminer/name/.initial = {},
+  letterOfApproval/approvers/externalExaminer/title/.initial = {},
+  letterOfApproval/approvers/externalExaminer/institution/.initial = {},
+  %
+}
+\newcommand*\setupProject[1]{\pgfqkeys{/Project}{#1}}
+

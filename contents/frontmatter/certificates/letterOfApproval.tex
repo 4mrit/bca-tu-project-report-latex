@@ -1,0 +1,56 @@
+\pagestyle{plain}  % Removes header for this page
+\addcontentsline{toc}{chapter}{Letter of Approval}  
+
+\centering
+\includegraphics[scale=0.3]{contents/frontmatter/images/tu-logo.png} \\ 
+\vspace{1cm}
+
+\begin{center}
+    {\Large \textbf{\pgfkeysvalueof{/Project/institute/university}}} \\  
+    {\large \pgfkeysvalueof{/Project/institute/faculty}} \\  
+    {\large \pgfkeysvalueof{/Project/institute/college}}  
+\end{center}
+
+\vspace{0cm}
+
+\begin{center}
+    {\Large \textbf{LETTER OF APPROVAL}}
+\end{center}
+
+\vspace{0cm}
+
+ \para{This is to certify that this project prepared by \textbf{\pgfkeysvalueof{/Project/authors/author1/name}}, \textbf{\pgfkeysvalueof{/Project/authors/author2/name}} entitled \textit{“\ProjectTitleCaps”} in partial fulfillment of the requirements for the degree of Bachelor in Computer Application has been evaluated. In our opinion, it is satisfactory in the scope and quality as a project for the required degree.
+}
+
+\vspace{0.5cm}
+
+\begin{table}[h]
+    \setstretch{1.1}
+    \centering
+    \noindent
+    \begin{tabularx}{\textwidth} { 
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X | }
+        \hline
+        & \\
+        & \\
+
+        \textbf{…………………………….}                                                         & \textbf{…………………………….}                                                       \\  
+        \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/name}} & \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/name}} \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/title}         & \pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/title}         \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/institution}   & \pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/institution}   \\  
+
+        \hline
+        & \\
+        & \\
+
+        \textbf{…………………………….}                                                               & \textbf{…………………………….}                                                               \\  
+        \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/name}} & \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/name}} \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/title}         & \pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/title}         \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/institution}   & \pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/institution}   \\  
+
+        \hline
+    \end{tabularx}
+\end{table}
+
+\pagebreak

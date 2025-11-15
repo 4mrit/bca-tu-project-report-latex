@@ -1,3 +1,4 @@
+/.git
 *.aux
 *.fdb_latexmk
 *.fls
@@ -26,4 +27,7 @@
 *.bak
 *.tdo
 *.tlog
-.DS_STORE
+/.vscode
+/.idea
+node_modules
+__pycache__

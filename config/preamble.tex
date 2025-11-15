@@ -15,7 +15,20 @@
 \usepackage{lipsum}      % Lorem Ipsum
 
 % Typography and Fonts
-\usepackage{newtxtext,newtxmath}  % Times New Roman alternative with math
+% Use T1 encoding and microtype for consistent glyph shapes and better typography
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  % Provide text symbol compatibility and nobreakspace for XeTeX builds
+  \usepackage{textcomp}
+  \setmainfont{TeX Gyre Termes}
+  \setmonofont{TeX Gyre Cursor}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext,newtxmath}
+\fi
+\usepackage{microtype}
 
 % Citations and References
 \usepackage{hyperref}    % Hyperlinks

@@ -2,7 +2,9 @@
 \pgfkeys{
   /Project/.cd,
   title/.initial = {ProjectName},
-  title/allcaps/.code = {\edef\ProjectTitleCaps{\MakeUppercase{#1}}},
+  % Avoid using \edef since it expands tokens like \& and can inject control sequences.
+  % Store raw title in \ProjectTitleRaw and define \ProjectTitleCaps to use \MakeUppercase at typesetting time.
+  title/allcaps/.code = {\gdef\ProjectTitleRaw{#1}\gdef\ProjectTitleCaps{\MakeUppercase{\ProjectTitleRaw}}},
   submissionDate/.initial = {},
   degree/.initial = {},
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

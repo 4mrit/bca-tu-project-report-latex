@@ -1,0 +1,36 @@
+graph TD
+    subgraph "Actors"
+        Admin[Admin]
+        User[User]
+    end
+    
+    subgraph "Use Cases"
+        Login[Login]
+        ManageProducts[Manage Products]
+        ManageOrders[Manage Orders]
+        ViewReports[View Reports]
+        BrowseProducts[Browse Products]
+        PlaceOrder[Place Order]
+    end
+    
+    %% Admin connections
+    Admin --> Login
+    Admin --> ManageProducts
+    Admin --> ManageOrders
+    Admin --> ViewReports
+    
+    %% User connections
+    User --> Login
+    User --> BrowseProducts
+    User --> PlaceOrder
+    User --> ManageOrders
+    
+    %% Styling
+    style Admin fill:#ff6b6b
+    style User fill:#4285f4
+    style Login fill:#f8f9fa
+    style ManageProducts fill:#e9ecef
+    style ManageOrders fill:#e9ecef
+    style ViewReports fill:#e9ecef
+    style BrowseProducts fill:#d4edda
+    style PlaceOrder fill:#d4edda

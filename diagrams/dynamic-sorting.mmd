@@ -1,0 +1,23 @@
+flowchart TD
+    A[Sales Data Request] --> B{Sort By Column?}
+    B -->|Date| C[Sort by Order Date]
+    B -->|Total| D[Sort by Total Amount]
+    B -->|Status| E[Sort by Order Status]
+    
+    C --> F[Apply LINQ OrderBy x => x.OrderDate]
+    D --> G[Apply LINQ OrderBy x => x.TotalAmount]
+    E --> H[Apply LINQ OrderBy x => x.Status]
+    
+    F --> I[Apply Date Filter]
+    G --> J[Apply Status Filter]
+    H --> K[Apply Amount Filter]
+    
+    I --> L[Paginate Results]
+    J --> L
+    K --> L
+    
+    L --> M[Return Sorted & Filtered Data]
+    
+    style A fill:#e3f2fd
+    style M fill:#2ecc71
+

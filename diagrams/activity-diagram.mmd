@@ -1,17 +1,14 @@
-activityDiagram
-    start
-    :Browse Products
-    :Add to Cart
-    :Review Cart
-    :Proceed to Checkout
-    :Payment Processing
-    if (Payment Successful?) then (yes)
-        :Order Confirmation
-        :Inventory Update
-        :Send Notification
-        stop
-    else (no)
-        :Payment Failed
-        :Retry Payment
-        stop
-    endif
+flowchart TD
+    start --> addToCart
+    addToCart --> reviewCart
+    reviewCart --> proceedToCheckout
+    proceedToCheckout --> paymentProcessing
+    paymentProcessing --> paymentDecision{Payment Successful?}
+    paymentDecision -- yes --> orderConfirmation
+    orderConfirmation --> inventoryUpdate
+    inventoryUpdate --> sendNotification
+    sendNotification --> stop
+    paymentDecision -- no --> paymentFailed
+    paymentFailed --> retryPayment
+    retryPayment --> stop
+

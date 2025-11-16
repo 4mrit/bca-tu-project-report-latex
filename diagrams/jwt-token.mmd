@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User
+    participant AuthManager
+    participant Database
+    participant Client
+    
+    User->>AuthManager: Request Login (credentials)
+    AuthManager->>Database: Validate User
+    Database-->>AuthManager: User Valid
+    AuthManager->>AuthManager: Generate Claims
+    AuthManager->>AuthManager: Create JWT Token
+    AuthManager->>AuthManager: Sign with HMAC-SHA256
+    AuthManager-->>User: Return JWT Token
+    User->>Client: Store JWT Token
+    Client->>AuthManager: Request with JWT
+    AuthManager->>AuthManager: Validate Token
+    AuthManager->>AuthManager: Verify HMAC-SHA256
+    AuthManager-->>Client: Token Valid
+    Client-->>User: Grant Access     

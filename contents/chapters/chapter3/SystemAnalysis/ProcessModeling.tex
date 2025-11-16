@@ -2,18 +2,18 @@
 
 Activity diagrams provide a high-level overview of the workflow within the system, showing how various activities are coordinated and how the flow of control progresses from one action to another. In this project, activity diagrams are used to model key processes such as order placement and order management.
 
-\textbf{Activity Diagram: Order Placement Process}
+\noindent\textbf{Activity Diagram: Order Placement Process}
 
 \begin{figure}[H]
     \centering
     % Replace with actual diagram image path
-    \includegraphics[width=0.85\textwidth]{activity_diagram.png}
+    \includegraphics[width=0.55\textwidth]{diagrams/activity-diagram.png}
     \caption{Activity Diagram for Customer Order Placement}
 \end{figure}
 
-\textbf{Description of Workflow:}
+\noindent\textbf{Description of Workflow:}
 
-\begin{itemize}
+\begin{itemize}[nolistsep,leftmargin=*]
     \item \textbf{Customer Browses Products:} The customer selects products from the catalog.
     \item \textbf{Add to Cart:} Selected items are added to the shopping cart.
     \item \textbf{Review Cart:} The customer reviews cart items and updates quantities if needed.
@@ -24,14 +24,13 @@ Activity diagrams provide a high-level overview of the workflow within the syste
     \item \textbf{Notification:} The system notifies the customer of the order status.
 \end{itemize}
 
-\textbf{Advantages of Activity Diagrams:}
-
-\begin{itemize}
+\noindent\textbf{Advantages of Activity Diagrams:}
+\begin{itemize}[nolistsep,leftmargin=*]
     \item Visualizes the sequence and dependencies of activities in the system.
     \item Helps identify potential bottlenecks or redundant steps in processes.
     \item Facilitates communication between developers and stakeholders regarding process flows.
     \item Serves as a reference for implementing workflows in the actual system.
 \end{itemize}
-
+\para{
 Activity diagrams complement state and sequence diagrams by providing a workflow-centric view, ensuring the system’s processes are clearly understood and properly structured prior to implementation.
-
+}

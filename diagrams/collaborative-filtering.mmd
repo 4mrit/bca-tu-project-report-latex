@@ -1,0 +1,12 @@
+flowchart TD
+    A[User Orders Products] --> B[Store Order History]
+    B --> C[Group by ProductID]
+    C --> D[Count Purchase Frequency]
+    D --> E[Identify Frequently Bought Together]
+    E --> F[Generate Top-N Recommendations]
+    F --> G[Cache Recommendations]
+    G --> H[Display to User]
+    
+    style A fill:#e1f5fe
+    style H fill:#3776ab
+    style F fill:#f39c12

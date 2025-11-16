@@ -2,11 +2,12 @@
 
 Dynamic modeling captures the behavior of the system over time and demonstrates how objects interact and change states in response to events. In this project, dynamic modeling is achieved through state diagrams and sequence diagrams, which provide insights into the system’s runtime behavior.
 
-\textbf{State Diagram:} The state diagram represents the life cycle of an order in the system, showing all possible states and transitions.
+\newpage
+\noindent\textbf{State Diagram:} The state diagram represents the life cycle of an order in the system, showing all possible states and transitions.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{diagrams/state-diagram.png}
+    \includegraphics[width=0.7\textwidth]{diagrams/state-diagram.png}
     \caption{State Diagram of an Order in the E-commerce System}
 \end{figure}
 
@@ -21,17 +22,17 @@ Dynamic modeling captures the behavior of the system over time and demonstrates 
     \item \textbf{Cancelled:} Terminal state if the order is cancelled at any stage before shipment.
 \end{itemize}
 
-\textbf{Sequence Diagram:} The sequence diagram illustrates the interaction between objects when a customer places an order, showing the chronological flow of messages and method invocations.
+\noindent\textbf{Sequence Diagram:} The sequence diagram illustrates the interaction between objects when a customer places an order, showing the chronological flow of messages and method invocations.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{diagrams/activity-diagram.png}
-    \caption{Activity Diagram for Customer Order Placement}
+    \includegraphics[width=1\textwidth]{diagrams/sequence-diagram.png}
+    \caption{Sequence Diagram for Customer Order Placement}
 \end{figure}
 
-\textbf{Description of Interaction:}
+\noindent\textbf{Description of Interaction:}
 
-\begin{itemize}
+\begin{itemize}[nolistsep,leftmargin=*]
     \item \textbf{Customer} initiates the order by selecting products and adding them to the cart.
     \item \textbf{Cart} object updates the items and calculates the total price.
     \item \textbf{Order} object is created upon order confirmation.
@@ -40,5 +41,7 @@ Dynamic modeling captures the behavior of the system over time and demonstrates 
     \item \textbf{Notification} system alerts the customer about order status changes.
 \end{itemize}
 
+\para{
 Dynamic modeling ensures that the system’s runtime behavior is clearly understood, helping identify possible state transitions, interactions, and scenarios before implementation. It also provides a foundation for testing and validating workflow consistency during development.
 
+}

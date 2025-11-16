@@ -5,18 +5,18 @@ The system is organized into several key modules. Each module is designed to be 
 
 \subsection{Implementation Details of Modules}
 
-\textbf{Product Recommendation Module:} \\
-The recommendation system leverages order-based collaborative filtering. The \texttt{GetRecommendedProducts} method groups historical purchase records by \texttt{ProductId} and counts occurrences to identify frequently bought-together items. Recommendations are cached per user session to reduce repeated computation. The module exposes a service interface to retrieve top-N product suggestions for display on the storefront.
+\noindent\textbf{Product Recommendation Module:} \\
+The recommendation system leverages order-based collaborative filtering. The "GetRecommendedProducts" method groups historical purchase records by \texttt{ProductId} and counts occurrences to identify frequently bought-together items. Recommendations are cached per user session to reduce repeated computation. The module exposes a service interface to retrieve top-N product suggestions for display on the storefront.
 
-\textbf{Authentication Module:} \\
+\noindent\textbf{Authentication Module:} \\
 Handles secure user authentication using JWT tokens. The \texttt{GenerateToken} function signs tokens with HMAC-SHA256 using a symmetric key. Tokens embed user claims including roles and expiry, and are returned to the client for subsequent authenticated requests. Token validation middleware intercepts requests to enforce authorization policies. 
 
-\textbf{Sales Management Module:} \\
+\noindent\textbf{Sales Management Module:} \\
 Supports dynamic multi-column sorting and filtering of sales data. The \texttt{GetSortedSales} function interprets a configurable \texttt{sortByColumn} parameter and applies corresponding LINQ ordering expressions. Additional filters on date, status, and total amount are applied server-side to optimize query performance. Results are paginated for efficient UI rendering.
 
-\textbf{Product Catalog Module:} \\
+\noindent\textbf{Product Catalog Module:} \\
 Manages product lifecycle including creation, updates, and inventory adjustments. The \texttt{CreateProduct} and \texttt{UpdateProduct} endpoints enforce validation rules for mandatory fields, price constraints, and stock availability. Changes propagate to the caching layer to minimize database reads. The module ensures consistency between relational data and search indices.
 
-\textbf{Order Processing Module:} \\
+\noindent\textbf{Order Processing Module:} \\
 Coordinates order placement, payment capture, and inventory updates. The \texttt{ProcessOrder} function executes atomic transactions to prevent overselling. It validates cart items, calculates totals, updates stock, and triggers downstream notifications. Structured logs are persisted for auditing, and compensating actions are executed in case of transaction failures.
 

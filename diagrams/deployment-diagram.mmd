@@ -1,0 +1,30 @@
+graph TD
+    subgraph "Client Layer"
+        A[Web Browser]
+        B[Mobile App]
+    end
+    
+    subgraph "Application Server"
+        C[Apache/Nginx]
+        D[.NET 8 Application]
+        E[Blazor Server]
+    end
+    
+    subgraph "Database Layer"
+        F[PostgreSQL Server]
+        G[Redis Cache Server]
+    end
+    
+    subgraph "External Services"
+        H[Payment Gateway API]
+        I[Email Service API]
+    end
+    
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+    E --> I

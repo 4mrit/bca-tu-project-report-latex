@@ -1,0 +1,53 @@
+classDiagram
+    class User {
+        +int userId
+        +string name
+        +string email
+        +string password
+        +login()
+        +logout()
+        +updateProfile()
+    }
+    
+    class Product {
+        +int productId
+        +string name
+        +decimal price
+        +int stock
+        +string description
+        +addProduct()
+        +updateProduct()
+        +removeProduct()
+    }
+    
+    class Order {
+        +int orderId
+        +DateTime orderDate
+        +string status
+        +decimal totalAmount
+        +createOrder()
+        +cancelOrder()
+        +updateStatus()
+    }
+    
+    class Cart {
+        +int cartId
+        +List~CartItems~ items
+        +addItem()
+        +removeItem()
+        +calculateTotal()
+    }
+    
+    class Payment {
+        +int paymentId
+        +decimal amount
+        +string method
+        +string status
+        +processPayment()
+        +refundPayment()
+    }
+    
+    User "1" -- "*" Cart : has
+    Cart "1" -- "*" Product : contains
+    User "1" -- "*" Order : places
+    Order "1" -- "1" Payment : processes

@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Customer
+    participant Cart
+    participant Order
+    participant Payment
+    participant Inventory
+    participant Notification
+    
+    Customer->>Cart: addItems()
+    Cart->>Cart: calculateTotal()
+    Customer->>Order: createOrder()
+    Order->>Payment: processPayment()
+    Payment-->>Order: paymentConfirmed()
+    Order->>Inventory: updateStock()
+    Order->>Notification: sendConfirmation()
+    Notification-->>Customer: orderStatusUpdate()

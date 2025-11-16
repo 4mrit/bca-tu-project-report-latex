@@ -1,18 +1,18 @@
 \subsection{Object Modeling}
-Object modeling is essential to understand the static structure of the system and the interaction between different entities. In this project, the system is designed to allow small shop owners to manage their products, orders, and customers efficiently. Object modeling is represented through class diagrams and object diagrams.
+Object modeling is essential to understand the static structure of the system . In this project, the system is designed to allow small shop owners to manage their products \& products efficiently. Object modeling is represented through class diagrams and object diagrams.
 
-\textbf{Class Diagram:} The class diagram below represents the main classes, their attributes, methods, and relationships within the system.
+\\
+\noindent\textbf{Class Diagram:} The class diagram below represents the main classes, their attributes, methods, and relationships within the system.
 
 \begin{figure}[H]
     \centering
-    % Replace with actual diagram image path
-    \includegraphics[width=0.8\textwidth]{class_diagram.png}
+    \includegraphics[width=0.7\textwidth]{diagrams/class-diagram.png}
     \caption{Class Diagram of the E-commerce System for SMEs}
 \end{figure}
 
 \textbf{Description of Main Classes:}
 
-\begin{itemize}
+\begin{itemize}[]
     \item \textbf{User:} Represents all system users including shop owners and customers. Attributes include \textit{userID, name, email}, and methods like \textit{login(), logout(), updateProfile()}.
     \item \textbf{Product:} Represents items available for sale. Attributes include \textit{productID, name, price, stock}, and methods such as \textit{addProduct(), updateProduct(), removeProduct()}.
     \item \textbf{Order:} Captures customer orders. Attributes include \textit{orderID, date, status}, and methods like \textit{createOrder(), cancelOrder(), updateStatus()}.
@@ -24,9 +24,8 @@ Object modeling is essential to understand the static structure of the system an
 
 \begin{figure}[H]
     \centering
-    % Replace with actual diagram image path
-    \includegraphics[width=0.7\textwidth]{object_diagram.png}
-    \caption{Object Diagram Showing Customer Placing an Order}
+    \includegraphics[width=0.7\textwidth]{diagrams/sequence-diagram.png}
+    \caption{Sequence Diagram Showing Customer Placing an Order}
 \end{figure}
 
 \textbf{Description of Objects:}

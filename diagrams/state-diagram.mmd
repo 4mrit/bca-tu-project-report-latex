@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> Pending: Customer places order
+    Pending --> Confirmed: Payment successful
+    Pending --> Cancelled: Customer cancels
+    
+    Confirmed --> Processing: Order preparation
+    Processing --> Shipped: Order dispatched
+    Shipped --> Delivered: Customer receives order
+    
+    Delivered --> [*]
+    Cancelled --> [*]

@@ -1,0 +1,27 @@
+graph TD
+    subgraph "Web Server"
+        A[Blazor Web App]
+        B[Authentication Service]
+        C[Product Management]
+        D[Order Processing]
+    end
+    
+    subgraph "Database Server"
+        E[PostgreSQL Database]
+        F[Redis Cache]
+    end
+    
+    subgraph "External Services"
+        G[Payment Gateway]
+        H[Email Service]
+    end
+    
+    A --> B
+    A --> C
+    A --> D
+    B --> E
+    C --> E
+    D --> E
+    C --> F
+    D --> G
+    D --> H

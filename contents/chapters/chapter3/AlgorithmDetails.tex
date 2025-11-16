@@ -1,3 +1,48 @@
 \section{Algorithm Details}
 
-Details of Algorithm
+This section presents the key algorithms implemented in the SME E-Commerce System. The focus is on efficiency, security, and dynamic functionality.
+
+\begin{enumerate}
+    \item \textbf{Collaborative Filtering Recommendation Algorithm}
+    \begin{itemize}
+        \item \textbf{Location:} \texttt{Infrastructure/Repositories/ProductRecommendationRepository}
+        \item \textbf{Type:} Order-based collaborative filtering using frequency counting
+        \item \textbf{Description:} Groups products by \texttt{ProductId} and counts occurrences to identify frequently bought together items.
+    \end{itemize}
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\textwidth]{collaborative-filtering.png} % Replace with your figure
+        \caption{Illustration of Collaborative Filtering Algorithm}
+        \label{fig:collaborative-filtering}
+    \end{figure}
+    
+    \item \textbf{JWT Token Generation Algorithm}
+    \begin{itemize}
+        \item \textbf{Location:} \texttt{Infrastructure/Repositories/Authentication/AppTokenManager}
+        \item \textbf{Type:} HMAC-SHA256 symmetric key signing
+        \item \textbf{Description:} Generates secure JWT tokens using a symmetric key and HMAC-SHA256 algorithm for authentication.
+    \end{itemize}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\textwidth]{jwt-token.png} % Replace with your figure
+        \caption{Flow of JWT Token Generation Algorithm}
+        \label{fig:jwt-token}
+    \end{figure}
+
+    \item \textbf{Multi-Column Dynamic Sorting Algorithm}
+    \begin{itemize}
+        \item \textbf{Location:} \texttt{Presentation/Web/Pages/Administration/SalesPage.razor.cs}
+        \item \textbf{Type:} Switch-based expression sorting with configurable columns
+        \item \textbf{Description:} Dynamically sorts sales data by various columns like \texttt{Date}, \texttt{Total}, or \texttt{Status}.
+    \end{itemize}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\textwidth]{dynamic-sorting.png} % Replace with your figure
+        \caption{Illustration of Multi-Column Dynamic Sorting Algorithm}
+        \label{fig:dynamic-sorting}
+    \end{figure}
+\end{enumerate}
+

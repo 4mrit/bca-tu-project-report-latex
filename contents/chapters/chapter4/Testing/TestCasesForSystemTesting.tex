@@ -1,3 +1,4 @@
+\newpage
 \subsection{Test Cases For System Testing}
 
 \begin{table}[h]
@@ -13,11 +14,17 @@
         \hline
         \textbf{Test Case No} & \textbf{Module} & \textbf{Test Description} & \textbf{Expected Result} & \textbf{Result} \\
         \hline
-        TC-001 & User Authentication & Test login with valid credentials & Successful login & Pass \\
+        TC-ST-001 & User Management & Complete user registration  & User account created sent & Pass \\
         \hline
-        TC-002 & Product Catalog & Verify product search functionality & Relevant products displayed & Pass \\
+        TC-ST-002 & E-commerce Flow & Complete purchase flow (browse → cart → checkout → payment) & Order placed successfully, payment confirmed & Pass \\
         \hline
-        TC-003 & Shopping Cart & Add item to cart & Item appears in cart & Pass \\
+        TC-ST-003 & Product Catalog & Product search and filtering functionality & Relevant products displayed based on search. & Pass \\
+        \hline
+        TC-ST-004 & Shopping Cart & Shopping cart operations (add, update, remove items) & Cart operations work correctly, totals updated & Pass \\
+        \hline
+        TC-ST-005 & Admin Features & Product management (add, edit, delete products) & Admin can manage products successfully & Pass \\
+        \hline
+        TC-ST-006 & Order Management & Order and status management & Admin can mamage order statuses & Pass \\
         \hline
     \end{tabularx}
     \newline
@@ -25,3 +32,4 @@
 \end{table}
 
 \vfill
+\newpage

@@ -1,6 +1,46 @@
 \subsection{Dynamic Modeling}
 
-\begin{enumerate}[label=\roman*.]
-    \item \textbf{State Diagrams}
-    \item \textbf{Sequence Diagrams}
-\end{enumerate}
+Dynamic modeling captures the behavior of the system over time and demonstrates how objects interact and change states in response to events. In this project, dynamic modeling is achieved through state diagrams and sequence diagrams, which provide insights into the system’s runtime behavior.
+
+\textbf{State Diagram:} The state diagram represents the life cycle of an order in the system, showing all possible states and transitions.
+
+\begin{figure}[H]
+    \centering
+    % Replace with actual diagram image path
+    \includegraphics[width=0.75\textwidth]{state_diagram.png}
+    \caption{State Diagram of an Order in the E-commerce System}
+\end{figure}
+
+\textbf{Description of States:}
+
+\begin{itemize}
+    \item \textbf{Pending:} Initial state when a customer places an order but payment is not yet processed.
+    \item \textbf{Confirmed:} Order is confirmed after successful payment.
+    \item \textbf{Processing:} Order is being prepared for shipment.
+    \item \textbf{Shipped:} Order has been dispatched to the customer.
+    \item \textbf{Delivered:} Final state when the order reaches the customer.
+    \item \textbf{Cancelled:} Terminal state if the order is cancelled at any stage before shipment.
+\end{itemize}
+
+\textbf{Sequence Diagram:} The sequence diagram illustrates the interaction between objects when a customer places an order, showing the chronological flow of messages and method invocations.
+
+\begin{figure}[H]
+    \centering
+    % Replace with actual diagram image path
+    \includegraphics[width=0.85\textwidth]{sequence_diagram.png}
+    \caption{Sequence Diagram of Customer Placing an Order}
+\end{figure}
+
+\textbf{Description of Interaction:}
+
+\begin{itemize}
+    \item \textbf{Customer} initiates the order by selecting products and adding them to the cart.
+    \item \textbf{Cart} object updates the items and calculates the total price.
+    \item \textbf{Order} object is created upon order confirmation.
+    \item \textbf{Payment} object processes the payment and sends confirmation to the order.
+    \item \textbf{Inventory} object updates the stock after successful order placement.
+    \item \textbf{Notification} system alerts the customer about order status changes.
+\end{itemize}
+
+Dynamic modeling ensures that the system’s runtime behavior is clearly understood, helping identify possible state transitions, interactions, and scenarios before implementation. It also provides a foundation for testing and validating workflow consistency during development.
+

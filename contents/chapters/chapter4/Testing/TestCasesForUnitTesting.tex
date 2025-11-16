@@ -13,11 +13,17 @@
         \hline
         \textbf{Test Case No} & \textbf{Module} & \textbf{Test Description} & \textbf{Expected Result} & \textbf{Result} \\
         \hline
-        TC-001 & User Authentication & Test login with valid credentials & Successful login & Pass \\
+        TC-UT-001 & Authentication & JWT token generation with valid user credentials & Valid JWT token returned with user claims & Pass \\
         \hline
-        TC-002 & Product Catalog & Verify product search functionality & Relevant products displayed & Pass \\
+        TC-UT-002 & Authentication & JWT token validation with expired token & Token validation fails, returns unauthorized & Pass \\
         \hline
-        TC-003 & Shopping Cart & Add item to cart & Item appears in cart & Pass \\
+        TC-UT-003 & Product Catalog & Product creation with valid data & Product saved to database, ID generated & Pass \\
+        \hline
+        TC-UT-004 & Product Catalog & Product price validation (negative/zero prices) & Validation fails, error message returned & Pass \\
+        \hline
+        TC-UT-005 & Order Processing & Order total calculation with multiple items & Correct total including tax and shipping calculated & Pass \\
+        \hline
+        TC-UT-006 & Order Processing & Inventory update on order placement & Product stock reduced by ordered quantity & Pass \\
         \hline
     \end{tabularx}
     \newline
